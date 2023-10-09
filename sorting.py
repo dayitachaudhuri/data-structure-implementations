@@ -27,6 +27,17 @@ def selectionsort(arr,n):
     return arr
 
 # ----------------------------------------
+# Insertion Sort
+# ----------------------------------------
+def insertionsort(arr,n):
+    for i in range(1,n-1):
+        j = i-1
+        while j>=0 and arr[j]>arr[i]:
+            arr[j+1] = arr[j]
+        arr[i], arr[j+1] = arr[j+1], arr[i]
+    return arr
+
+# ----------------------------------------
 # Merge Sort
 # ----------------------------------------
 def mergesortRunner(arr,n):
@@ -96,6 +107,7 @@ def main():
     n = len(arr)
     print("Bubble sorted Array -> ", bubblesort(arr,n))
     print("Selection sorted Array -> ", selectionsort(arr,n))
+    print("Insertion sorted Array -> ", insertionsort(arr,n))
     print("Merge sorted Array -> ", mergesortRunner(arr,n))
     print("Quick sorted Array -> ", quicksortRunner(arr,n))
 
