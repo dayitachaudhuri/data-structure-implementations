@@ -46,6 +46,7 @@ class BST:
             print()
             q = temp
             indent -= 1
+
 #----------------------------------------
 # Helper Functions
 
@@ -82,7 +83,6 @@ def deleteHelper(node, currVal):
                 itr.right = itr.right.left
     return node
 
-# ---------------------------------------
 # ---------------------------------------
 # Balanced Binary Search Tree (AVL TREE)
 #----------------------------------------
@@ -205,7 +205,6 @@ def deleteHelperBalanced(node, currVal):
                 node.val = itr.right.val
                 itr.right = itr.right.left
     return node
-
 
 # ---------------------------------------
 # Driver Function
